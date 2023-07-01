@@ -4,7 +4,7 @@ import "./App.css";
 import { Home } from "./pages/Home";
 import { Wallet } from "./pages/Wallet";
 import { Route, Routes } from "react-router-dom";
-import { CurrencyContext } from "./utils/context";
+import { CurrencyContext } from "./context/Context";
 
 const baseUrl =
 "https://api.currencyapi.com/v3/latest?apikey=1CsPRodQTXYJSfhYvluRYzFUIp532gq9lQ3A9D5X";
