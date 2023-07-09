@@ -1,4 +1,4 @@
-.header {
+/* .header {
     display: flex;
     justify-content: space-between;
     background-color: #fff;
@@ -11,24 +11,18 @@
     height: 30px;
     width: 8vw;
     color: #fff;
-    background-color: #04543e;
+    background-color: #0000ffb8;
     margin: auto 0;
     outline: none;
     border: none;
   }
   
   .optionIterms:hover {
-    background-color: #04543f86;
-  }
-  
-  option {
-    width: 25px;
-    /* border: none; */
+    background-color: #0000ffb8;
   }
   
   .selectCurrency {
     height: 30px;
-  
     margin: auto 0;
   }
   
@@ -39,37 +33,29 @@
     justify-content: center;
     height: 30px;
     margin: auto 0;
-    background-color: #04543e;
+    background-color: #0000ffb8;
     color: #fff;
     padding: 4px 8px;
     text-transform: uppercase;
-  }
+  } */
   
   .wallet {
-    /* background-color: #ffffff1e; */
-    /* height: 80vh; */
-    margin: 5% 15%;
-    /* padding: 10px; */
-    /* border-radius: 5px; */
-    text-transform: uppercase;
+    /* margin: 5% 15%; */
+    /* text-transform: uppercase; */
+    /* background-image: url('../../assets/money.avif');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(8px);
+  -webkit-filter: blur(8px); */
   }
   
-  .wallet h2 {
-    font-size: 20px;
+  /* .wallet h2 {
+    font-size: 22px;
     font-weight: bold;
-  }
+  } */
   
-  .wallet h2 span {
-    color: #04543e;
-    font-weight: 500;
-  }
-  
-  .cards h3 {
-    margin: 6px 0;
-    text-align: end;
-  }
-  
-  .funds {
+  /* .funds {
     display: flex;
     flex-direction: column;
     justify-content: end;
@@ -80,16 +66,15 @@
     width: 100px;
     margin: auto;
     left: 0;
-  }
+  } */
   
-  .balance {
+  /* .balance {
     font-size: 20px;
     font-weight: bold;
     margin: auto 0;
   }
   
   .walletCards {
-    display: flex;
     justify-content: space-between;
     border: 1px solid #fff;
     width: fit-content;
@@ -97,31 +82,22 @@
   }
   
   .cards {
-    display: flex;
-    /* width: 100px; */
     flex-direction: row;
-    gap: 30px;
     justify-content: center;
-    flex-wrap: wrap;
-  }
+    line-height: 3;
+  } */
   
-  .coin {
+  /* .coin {
     font-size: 6rem;
   }
   
-  .funds {
-    padding: 5px;
-  }
-  
   .funds button {
-    display: flex;
-    gap: 10px;
     align-content: center;
     justify-content: center;
     height: 30px;
     margin-top: auto;
     margin-left: 40px;
-    background-color: #04543e;
+    background-color: #0000ffb8;
     color: #fff;
     padding: 4px 8px;
     text-transform: uppercase;
@@ -129,14 +105,13 @@
   
   .balance {
     font-size: 15px;
-    color: #04543e;
-    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset,
-      rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
-    display: flex;
+    color: blue;
+    box-shadow: #ccdbe8 3px 3px 6px 0px inset,
+      #ffffff80 -3px -3px 6px 1px inset;
     flex-wrap: wrap;
-    padding: 5px 8px;
+    padding: 5px 10px;
     border-radius: 10px;
-  }
+  } */
   
   @media screen and (max-width: 770px) {
     .wallet {

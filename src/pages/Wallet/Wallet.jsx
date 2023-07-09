@@ -35,6 +35,16 @@ export const Wallet = () => {
 
   return (
     <div className="wallet">
+
+      <div className="exchangeSection">
+        <h2 className="text-center">wallet's Id: {walletName}</h2>
+        <FundsDeposit />
+      </div>
+
+      <PopUp trigger={showPopUp} setTrigger={setShowPopUp}>
+            <DepositForm />
+          </PopUp>
+          
       <div className="walletContainer">
         <div className="header">
           <button onClick={() => setShowPopUp(true)} className="depositeBtn">
@@ -65,14 +75,9 @@ export const Wallet = () => {
         </div>
       </div>
 
-      <div className="exchangeSection">
-        <h2 className="text-center">wallet's Id: {walletName}</h2>
-        <FundsDeposit />
-      </div>
+      
 
-      <PopUp trigger={showPopUp} setTrigger={setShowPopUp}>
-            <DepositForm />
-          </PopUp>
+     
     </div>
   );
 };

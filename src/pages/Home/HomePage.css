@@ -12,8 +12,9 @@
 
 .navbar-logo {
   display: flex;
-  width: 35px;
-  gap: 0;
+  flex-direction: row;
+  gap: -2;
+  width: 40px;
 }
 
 .nav-login {
@@ -33,7 +34,7 @@
 .headBtn:hover {
   box-shadow: inset 100px 0 0 0 #000000dc;
   color: white;
-  transition: color 0.4s ease-in-out, box-shadow 0.5s ease-in-out;
+  transition: color 0.2s ease-in-out, box-shadow 0.4s ease-in-out;
 }
 
 .log-in {
@@ -45,14 +46,14 @@
   padding-top: 100px;
   height: 100%;
   text-align: center;
-  margin: 2% 15%; 
+  margin: 2% 15%;
 }
 
 .head1 {
   width: 40%;
   margin: auto;
   font-weight: bolder;
-  font-size: 26px;
+  font-size: 33px;
   text-align: center;
   justify-content: center;
   padding-bottom: 30px;
@@ -70,7 +71,6 @@
 
 .wrapMe {
   display: flex;
-  /* width: 100%; */
   flex-direction: row;
   margin: auto;
   justify-content: space-between;
@@ -80,10 +80,9 @@
   width: 18%;
   margin: auto;
   font-weight: bolder;
-  font-size: 24px;
+  font-size: 32px;
   text-align: center;
   justify-content: center;
-  /* padding-top: 0; */
 }
 
 .p2 {
@@ -94,21 +93,29 @@
   padding: 30px 0 80px;
 }
 
+.wrap-me {
+  display: flex;
+  width: 80%;
+  flex-direction: row;
+  margin: auto;
+  gap: 19%;
+}
+
+.homeimage {
+  border: none;
+  background-image: white;
+  background-position: fixed;
+}
+
 .head3 {
-  width: 50%;
-  /* margin: auto; */
   font-weight: 600;
   font-size: 22px;
   text-align: left;
-  margin-left: 50%;
   line-height: 4;
 }
 
 .p3 {
-  width: 30%;
-  /* margin: auto; */
   font-size: 18px;
-  margin-left: 50%;
   text-align: left;
   padding-bottom: 50px;
 }
@@ -130,34 +137,11 @@
   font-weight: 500;
   text-align: center;
   justify-content: center;
-  /* padding-bottom: 80px; */
 }
-
-/* .headBtn button {
-   
-  }
-  
-  .headBtn button:first-child {
-    color: #5ecfb1;
-  }
-  
-  .headBtn button:first-child:hover {
-    color: #fff;
-    background-color: #04543e;
-  }
-  
-  .headBtn button:last-child {
-    border: none;
-    color: #04543e;
-  }
-  
-  .exchangeSelection {
-  } */
 
 @media screen and (max-width: 770px) {
   .homePage {
     display: block;
-    /* background-color: red; */
     width: 100%;
     height: 90vh;
     text-align: center;
@@ -172,9 +156,7 @@
     margin-bottom: 1px;
   }
 
-  .homeImg img {
-    /* display: none; */
-    /* margin-top: 20px; */
+  .homeimage {
     width: 22rem;
     height: auto;
     margin: 50px 70px;
