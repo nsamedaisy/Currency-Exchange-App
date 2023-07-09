@@ -1,10 +1,8 @@
 import React, { useContext, useState } from "react";
 import "./Wallet.css";
 import { CurrencyContext } from "../../utils/Context";
-import { DepositForm } from "../../components/handlExchange/DepositForm";
-import { PopUp } from "../../components/popups/Popup";
+
 import { FundsDeposit } from "../../components/FundCard";
-// import { SiMoneygram } from "react-icons/si";
 
 export const Wallet = () => {
   const { baseCurrency } = useContext(CurrencyContext);
@@ -24,8 +22,8 @@ export const Wallet = () => {
       }
     });
 
-    valTo = valTo?.value;
-    console.log("this is value to", valTo);
+    let valTo1 = valTo?.value;
+    console.log("this is value to", valTo1);
 
     let valFrom = baseCurrency?.filter((curren) => curren.code !== selected);
 
@@ -34,29 +32,18 @@ export const Wallet = () => {
   balance();
 
   return (
-    <div className="wallet">
-
-      <div className="exchangeSection">
-        <h2 className="text-center">wallet's Id: {walletName}</h2>
-        <FundsDeposit />
-      </div>
-
-      <PopUp trigger={showPopUp} setTrigger={setShowPopUp}>
-            <DepositForm />
-          </PopUp>
-          
-      <div className="walletContainer">
-        <div className="header">
-          <button onClick={() => setShowPopUp(true)} className="depositeBtn">
+    <div class="wallet">
+      <h2 class="walletname">wallet's Id: {walletName}</h2>
+      <div class="walletContainer">
+        <div class="header">
+          <button onClick={() => setShowPopUp(true)} class="depositeBtn">
             Deposit
           </button>
-
-          
-          <div className="balance">
+          <div class="balance">
             <span> 100000: {selected}</span>
           </div>
 
-          <div className="selectCurrency">
+          <div class="selectCurrency">
             <label htmlFor="currency">
               {/* select currency */}
               <select
@@ -65,7 +52,7 @@ export const Wallet = () => {
                 onChange={handleSelect}
               >
                 {baseCurrency.map((currency) => (
-                  <option className="optionIterms" value={baseCurrency.code}>
+                  <option class="optionIterms" value={baseCurrency.code}>
                     {currency.code}
                   </option>
                 ))}
@@ -74,10 +61,9 @@ export const Wallet = () => {
           </div>
         </div>
       </div>
-
-      
-
-     
+      <div>
+        <FundsDeposit />
+      </div>
     </div>
   );
 };

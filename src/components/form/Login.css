@@ -1,7 +1,6 @@
 .login {
     color: #020d14;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    /* margin: 20px 41px; */
     width: 90%;
     height: 90%;
     text-align: center;
@@ -29,14 +28,12 @@
     margin-top: 40px;
     text-align: center;
     padding: 5px 8px;
-    /* background-color: transparent; */
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
       rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-    /* color: #04543e; */
     color: #fff;
-    background-color: #04543e;
+    background-color: black;
     font-weight: 500;
-    text-transform: uppercase;
+    text-transform: capitalize;
     cursor: pointer;
     transition: 0.3s ease-in-out;
     border-radius: 2px;
@@ -49,6 +46,6 @@
   
   .login form button:hover {
     background-color: #fff;
-    color: #04543e;
+    color: black;
   }
   

@@ -67,7 +67,7 @@ export const DepositForm = () => {
           </label>
           <br />
           <label>
-            into
+            To
             <select
               className="exchangeSelection"
               name="currencyType"

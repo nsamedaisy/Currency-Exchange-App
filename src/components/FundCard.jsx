@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
-import { GiTwoCoins } from "react-icons/gi";
 import { getLocalStorage, updateLocalStorage } from "../service/Tools";
+import Dollarcoin from "../assets/dollarcoin.png"
 import { PopUp } from "./popups/Popup";
 import { CurrencyContext } from "../utils/Context";
 
@@ -28,9 +28,9 @@ export const FundsDeposit = () => {
     }));
   };
 
-  // handle currency convertion
+  // handle currency conversion
 
-  // get deposited funds from local statorage
+  // get deposited funds from local storage
 
   const convertAmmount = (OjbFrom, ObjTo) => {
     const rateF = baseCurrency.find(
@@ -71,13 +71,13 @@ export const FundsDeposit = () => {
         {walletFunds?.map((funds, index) => (
           <div className="walletCards">
             <div className="coin">
-              <GiTwoCoins />
+              <img src={Dollarcoin} width="25%"/>
             </div>
             <div className="funds">
               <h3>
                 {funds?.amount} {funds?.currencyType}
               </h3>
-              <button onClick={() => handleClick(funds)}>convert</button>
+              <button onClick={() => handleClick(funds)}>Convert</button>
             </div>
           </div>
         ))}
@@ -92,7 +92,7 @@ export const FundsDeposit = () => {
             <div className="login">
               <form action="submit" onSubmit={handleSubmit}>
                 <label>
-                  Convert {popupdata?.currencyType}
+                  Convert <br/>{popupdata?.currencyType}
                   <input
                     type="number"
                     name="amount"
@@ -105,10 +105,10 @@ export const FundsDeposit = () => {
                 </label>
                 <br />
                 <label>
-                  into
+                  To:  
                   <select
                     name="currencyType"
-                    defaultValue={convert.currencyType}
+                    defaultValue= {convert.currencyType}
                     onChange={handleChange}
                   >
                     {baseCurrency.map((currency) => (

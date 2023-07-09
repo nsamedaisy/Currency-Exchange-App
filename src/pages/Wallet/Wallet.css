@@ -1,138 +1,102 @@
-/* .header {
-    display: flex;
-    justify-content: space-between;
-    background-color: #fff;
-    color: #020d14;
-    padding: 5px;
-    height: 5rem;
+.wallet {
+  margin: 5% 15%;
+  line-height: 2;
+  font-size: 20px;
+}
+
+.walletname {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 25px;
+  padding-bottom: 60px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  color: #020d14;
+  padding-bottom: 70px;
+}
+
+select {
+  width: 8vw;
+  color: #fff;
+  background-color: black;
+  border-radius: 10px;
+  border: none;
+}
+
+.optionIterms:hover {
+  background-color: black;
+}
+
+.selectCurrency {
+  width: 90px;
+}
+
+.depositeBtn {
+  align-content: center;
+  justify-content: center;
+  margin: auto 0;
+  background-color: black;
+  color: #fff;
+  padding: 4px 20px;
+  text-transform: capitalize;
+  border-radius: 10px;
+}
+
+
+
+
+.funds {
+  flex-direction: column;
+  justify-content: end;
+  text-align: left;
+}
+
+
+
+.balance {
+  font-weight: bold;
+  margin: auto 0;
+}
+
+.cards {
+  line-height: 3;
+}
+
+
+.funds button {
+  align-content: center;
+  justify-content: center;
+  margin-left: 40px;
+  background-color: black;
+  color: #fff;
+  padding: 0 15px;
+  text-transform: capitalize;
+}
+
+
+@media screen and (max-width: 770px) {
+  .wallet {
+    height: 100vh;
   }
-  
+
+  .walletCards {
+    padding: 2px;
+    width: 100%;
+  }
+
+  .funds button {}
+
+  .coin {
+    /* display: none; */
+    font-size: 80px;
+  }
+
   select {
     height: 30px;
-    width: 8vw;
-    color: #fff;
-    background-color: #0000ffb8;
-    margin: auto 0;
-    outline: none;
-    border: none;
+    width: 100%;
   }
-  
-  .optionIterms:hover {
-    background-color: #0000ffb8;
-  }
-  
-  .selectCurrency {
-    height: 30px;
-    margin: auto 0;
-  }
-  
-  .depositeBtn {
-    display: flex;
-    gap: 10px;
-    align-content: center;
-    justify-content: center;
-    height: 30px;
-    margin: auto 0;
-    background-color: #0000ffb8;
-    color: #fff;
-    padding: 4px 8px;
-    text-transform: uppercase;
-  } */
-  
-  .wallet {
-    /* margin: 5% 15%; */
-    /* text-transform: uppercase; */
-    /* background-image: url('../../assets/money.avif');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    filter: blur(8px);
-  -webkit-filter: blur(8px); */
-  }
-  
-  /* .wallet h2 {
-    font-size: 22px;
-    font-weight: bold;
-  } */
-  
-  /* .funds {
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    text-align: left;
-  }
-  
-  .funds button {
-    width: 100px;
-    margin: auto;
-    left: 0;
-  } */
-  
-  /* .balance {
-    font-size: 20px;
-    font-weight: bold;
-    margin: auto 0;
-  }
-  
-  .walletCards {
-    justify-content: space-between;
-    border: 1px solid #fff;
-    width: fit-content;
-    padding: 10px;
-  }
-  
-  .cards {
-    flex-direction: row;
-    justify-content: center;
-    line-height: 3;
-  } */
-  
-  /* .coin {
-    font-size: 6rem;
-  }
-  
-  .funds button {
-    align-content: center;
-    justify-content: center;
-    height: 30px;
-    margin-top: auto;
-    margin-left: 40px;
-    background-color: #0000ffb8;
-    color: #fff;
-    padding: 4px 8px;
-    text-transform: uppercase;
-  }
-  
-  .balance {
-    font-size: 15px;
-    color: blue;
-    box-shadow: #ccdbe8 3px 3px 6px 0px inset,
-      #ffffff80 -3px -3px 6px 1px inset;
-    flex-wrap: wrap;
-    padding: 5px 10px;
-    border-radius: 10px;
-  } */
-  
-  @media screen and (max-width: 770px) {
-    .wallet {
-      height: 100vh;
-    }
-  
-    .walletCards {
-      padding: 2px;
-      width: 100%;
-    }
-  
-    .funds button {
-    }
-  
-    .coin {
-      /* display: none; */
-      font-size: 80px;
-    }
-  
-    select {
-      height: 30px;
-      width: 100%;
-    }
-  }
+}
