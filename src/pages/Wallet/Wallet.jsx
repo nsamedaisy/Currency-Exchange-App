@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import "./Wallet.css";
 import { CurrencyContext } from "../../utils/Context";
 
-import { FundsDeposit } from "../../components/FundCard";
+import { FundsDeposit } from "./FundsDeposit";
 
 export const Wallet = () => {
   const { baseCurrency } = useContext(CurrencyContext);
@@ -14,45 +14,66 @@ export const Wallet = () => {
     setSelected(e.target.value);
   };
 
-  // handle wallet's total balance
-  const balance = () => {
-    let valTo = baseCurrency?.find((cur) => {
-      if (cur.code === selected) {
-        return cur?.value;
-      }
-    });
+  const convertCurrency = (amount, fromCurrency, toCurrency) => {
+    const exchangeRates = {
+      USD: {
+        EUR: 0.85,
+        XAF: 550,
+      },
+      EUR: {
+        USD: 1.18,
+        XAF: 655,
+      },
+      XAF: {
+        USD: 0.0018,
+        EUR: 0.0015,
+      },
+    };
 
-    let valTo1 = valTo?.value;
-    console.log("this is value to", valTo1);
+    const rate = exchangeRates[fromCurrency][toCurrency];
+    const convertedAmount = amount * rate;
 
-    let valFrom = baseCurrency?.filter((curren) => curren.code !== selected);
-
-    console.log(valFrom);
+    return convertedAmount;
+    // console.log(convertedAmount)
   };
-  balance();
+
+  const [balance, setBalance] = useState({ USD: 0, EUR: 0, XAF: 0 });
+
+  const handleDeposit = (amount, currency) => {
+    const baseCurrency = "USD";
+    const convertedAmount = convertCurrency(amount, currency, baseCurrency);
+
+    setBalance((prevBalance) => ({
+      ...prevBalance,
+      [baseCurrency]: prevBalance[baseCurrency] + convertedAmount,
+    }));
+  };
 
   return (
-    <div class="wallet">
-      <h2 class="walletname">wallet's Id: {walletName}</h2>
-      <div class="walletContainer">
-        <div class="header">
-          <button onClick={() => setShowPopUp(true)} class="depositeBtn">
+    <div className="wallet">
+      <h2 className="walletname">Wallet's Id: {walletName}</h2>
+      <div className="walletContainer">
+        <div className="header">
+          <button onClick={() => setShowPopUp(true)} className="depositBtn">
             Deposit
           </button>
-          <div class="balance">
-            <span> 100000: {selected}</span>
+          <div className="balance">
+            <span>{balance.USD} USD</span>
+            <br />
+            <span>{balance.EUR} EUR</span>
+            <br />
+            <span>{balance.XAF} XAF</span>
           </div>
-
-          <div class="selectCurrency">
+          <div className="selectCurrency">
             <label htmlFor="currency">
-              {/* select currency */}
+              Select Currency:
               <select
                 name="selectedCurrency"
                 value={selected}
                 onChange={handleSelect}
               >
                 {baseCurrency.map((currency) => (
-                  <option class="optionIterms" value={baseCurrency.code}>
+                  <option key={currency.code} value={currency.code}>
                     {currency.code}
                   </option>
                 ))}
@@ -61,9 +82,13 @@ export const Wallet = () => {
           </div>
         </div>
       </div>
-      <div>
-        <FundsDeposit />
-      </div>
+      {showPopUp && (
+        <FundsDeposit
+          handleDeposit={handleDeposit}
+          selectedCurrency={selected}
+          setShowPopUp={setShowPopUp}
+        />
+      )}
     </div>
   );
 };
