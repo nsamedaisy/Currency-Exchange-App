@@ -24,7 +24,7 @@ export const Home = () => {
       : setShowPopUp(true);
   };
   return (
-    <div>
+    <div class="container">
       <div class="nav">
         <div class="logo-nav">
           <a class="navbar-logo" href="">
@@ -49,7 +49,7 @@ export const Home = () => {
           time.
         </p>
         <div class="wrapMe">
-          <h2 class="h2">The Best You Will Get</h2>
+          <h2 class="h2">The Best You Will Get Sign UP For Free And Get An Account</h2>
           <p class="p2">
             Quick transaction execution, attractive exchange rates and no need
             to have currency accounts with banks - these are just some of the
