@@ -9,6 +9,7 @@ export const Wallet = () => {
   const [selected, setSelected] = useState("USD");
   const [showPopUp, setShowPopUp] = useState(false);
   const walletName = localStorage.getItem("user");
+  const [balance, setBalance] = useState({ USD: 0, EUR: 0, XAF: 0 });
 
   const handleSelect = (e) => {
     setSelected(e.target.value);
@@ -36,8 +37,6 @@ export const Wallet = () => {
     return convertedAmount;
     // console.log(convertedAmount)
   };
-
-  const [balance, setBalance] = useState({ USD: 0, EUR: 0, XAF: 0 });
 
   const handleDeposit = (amount, currency) => {
     const baseCurrency = "USD";

@@ -1,12 +1,21 @@
 import React, { useState } from "react";
 
-export const FundsDeposit = ({ handleDeposit, selectedCurrency, setShowPopUp }) => {
+export const FundsDeposit = ({
+  handleDeposit,
+  selectedCurrency,
+  setShowPopUp,
+}) => {
   const [amount, setAmount] = useState(0);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     handleDeposit(amount, selectedCurrency);
     setShowPopUp(false);
+  };
+  const handleChange = (e) => {
+    e.preventDefault();
+    setAmount(e.target.value);
+    console.log(amount);
   };
 
   return (
@@ -18,7 +27,8 @@ export const FundsDeposit = ({ handleDeposit, selectedCurrency, setShowPopUp }) 
           type="number"
           name="amount"
           value={amount}
-          onChange={(e) => setAmount(parseFloat(e.target.value))}
+          onChange={handleChange}
+          // onChange={(e) => setAmount(parseFloat(e.target.value))}
         />
         <button type="submit">Deposit</button>
       </form>

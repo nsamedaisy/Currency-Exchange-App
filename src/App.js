@@ -13,6 +13,9 @@ function App() {
   const [currencies, setCurrencies] = useState(null);
   const [baseCurrency, setBaseCurrency] = useState([]);
 
+  console.clear()
+
+  console.log('this is base currency', baseCurrency);
   const updateBaseCurrency = (data) => {
     ["USD", "EUR", "XAF"].forEach((cur) => {
       setBaseCurrency((prev) => [...prev, data[`${cur}`]]);
