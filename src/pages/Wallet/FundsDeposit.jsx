@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./FundsDeposit.css";
 
 export const FundsDeposit = ({
   handleDeposit,
@@ -22,15 +23,16 @@ export const FundsDeposit = ({
     <div className="popup">
       <form onSubmit={handleSubmit}>
         <h3>Deposit Funds</h3>
+        <div className="inputAmt">
         <label htmlFor="amount">Amount:</label>
         <input
           type="number"
           name="amount"
           value={amount}
           onChange={handleChange}
-          // onChange={(e) => setAmount(parseFloat(e.target.value))}
         />
-        <button type="submit">Deposit</button>
+        </div><br />
+        <button className="btnFund" type="submit">Deposit</button>
       </form>
     </div>
   );

@@ -29,18 +29,19 @@
 }
 
 .headBtn {
-  padding: 5px 10px;
+  padding: 5px 50px;
   background-color: transparent;
   border: 1px solid #00000083;
   color: black;
   font-weight: 400;
+  /* width: 150px; */
   cursor: pointer;
 }
 
 .headBtn:hover {
-  box-shadow: inset 100px 0 0 0 #000000dc;
+  box-shadow: inset 200px 0 0 0 #000000dc;
   color: white;
-  transition: color 0.1s ease-in-out, box-shadow 0.4s ease-in-out;
+  transition: color 0.2s ease-in-out, box-shadow 0.4s ease-in-out;
 }
 
 .log-in {

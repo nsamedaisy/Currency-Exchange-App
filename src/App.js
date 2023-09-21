@@ -34,7 +34,7 @@ function App() {
     <CurrencyContext.Provider value={{ baseCurrency }}>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="wallet/Wallet" element={<Wallet />} />
+        <Route path="wallet" element={<Wallet />} />
       </Routes>
     </CurrencyContext.Provider>
   );

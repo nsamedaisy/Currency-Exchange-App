@@ -20,21 +20,21 @@ export const Home = () => {
   // hande login authentication
   const handleStart = () => {
     localStorage.getItem("user")
-      ? navigate("./Wallet/Wallet")
+      ? navigate("./Wallet")
       : setShowPopUp(true);
   };
   return (
     <div class="container">
       <div class="nav">
         <div class="logo-nav">
-          <a class="navbar-logo" href="">
+          <a class="navbar-logo" href="/">
             <img src={dollar} alt="logo" class="logo" />
             <img src={euro} alt="logo" class="logo" />
             <img src={franc} alt="logo" class="logo" />
           </a>
         </div>
         <div class="nav-login">
-          <a href="" class="log-in">
+          <a href="/" class="log-in">
             Log in
           </a>{" "}
           <button class="headBtn" onClick={handleStart}>

@@ -1,0 +1,30 @@
+.popup {
+  width: 30%;
+  background-color: #e4e4e49b;
+  position: absolute;
+  top: 50%;
+  transform: translate(-170%, 0);
+  padding: 10px;
+}
+
+.popup h3 {
+font-weight: 600;  
+}
+
+.inputAmt {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: row;
+}
+
+.inputAmt input {
+  width: 150px;
+  margin-left: 20px;
+}
+
+.btnFund {
+  text-align: center;
+  width: 150px;
+  background-color: #2d242496;
+  color: white;
+}
