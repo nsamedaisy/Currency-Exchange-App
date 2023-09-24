@@ -6,7 +6,7 @@ export const FundsDeposit = ({
   selectedCurrency,
   setShowPopUp,
 }) => {
-  const [amount, setAmount] = useState(0);
+  const [amount, setAmount] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
