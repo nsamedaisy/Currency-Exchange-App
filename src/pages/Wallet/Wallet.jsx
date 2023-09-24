@@ -44,7 +44,19 @@ export const Wallet = () => {
 
     setBalance((prevBalance) => ({
       ...prevBalance,
+      [currency]: prevBalance[currency] + amount,
       [baseCurrency]: prevBalance[baseCurrency] + convertedAmount,
+    }));
+  };
+
+  const handleWithdraw = (amount, currency) => {
+    const baseCurrency = "USD";
+    const convertedAmount = convertCurrency(amount, currency, baseCurrency);
+
+    setBalance((prevBalance) => ({
+      ...prevBalance,
+      [currency]: prevBalance[currency] - amount,
+      [baseCurrency]: prevBalance[baseCurrency] - convertedAmount,
     }));
   };
 
@@ -56,12 +68,16 @@ export const Wallet = () => {
           <button onClick={() => setShowPopUp(true)} className="depositBtn">
             Deposit
           </button>
+          <button onClick={() => handleWithdraw(50, "USD")} className="withdrawBtn">
+            Withdraw
+          </button>
           <div className="balance">
-            <span>{balance.USD} USD</span>
-            <br />
-            <span>{balance.EUR} EUR</span>
-            <br />
-            <span>{balance.XAF} XAF</span>
+            {baseCurrency.map((currency) => (
+              <span key={currency.code}>
+                {balance[currency.code]} {currency.code}
+                <br />
+              </span>
+            ))}
           </div>
           <div className="selectCurrency">
             <label htmlFor="currency">
